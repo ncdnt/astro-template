@@ -7,6 +7,10 @@
       "~/*": ["./src/*"],
       "~/public/*": ["./public/*"]
     },
-    "plugins": [{ "name": "@astrojs/ts-plugin" }]
+    "plugins": [{ "name": "@astrojs/ts-plugin" }],
+    // handled by `@typescript-eslint/no-unused-vars`
+    "noUnusedParameters": false,
+    // handled by `@typescript-eslint/only-throw-error`
+    "useUnknownInCatchVariables": false
   }
 }

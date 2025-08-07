@@ -1,0 +1,89 @@
+# ===========================================================================
+# Astro
+# ===========================================================================
+[[language]]
+name = "astro"
+language-servers = ["astro-ls", "vscode-eslint-language-server"]
+auto-format = true
+formatter = { command = "pnpm", args = [
+  "prettier",
+  "--config",
+  ".prettierrc",
+  "--parser",
+  "astro",
+] }
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = { typescript = { tsdk = "node_modules/typescript/lib" }, environment = "node" }
+
+# ===========================================================================
+# HTML/CSS
+# ===========================================================================
+[[language]]
+name = "html"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "html"] }
+
+[[language]]
+name = "css"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "css"] }
+
+[[language]]
+name = "scss"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "scss"] }
+
+# ===========================================================================
+# JSON
+# ===========================================================================
+[[language]]
+name = "json"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "json"] }
+
+[[language]]
+name = "jsonc"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "jsonc"] }
+
+# ===========================================================================
+# JS/JSX/TS/TSX
+# ===========================================================================
+[[language]]
+name = "javascript"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "jsx"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+
+[[language]]
+name = "tsx"
+auto-format = true
+formatter = { command = "pnpm", args = ["prettier", "--parser", "typescript"] }
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]

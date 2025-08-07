@@ -28,6 +28,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm preview`     | Previews your build locally                 |
 | `pnpm astro check` | Runs diagnostics + type-checking            |
 | `pnpm fmt`         | Runs `prettier --check` on the project root |
+| `pnpm lint`        | Runs `eslint` on `src/`                     |
 
 ## 👀 Learn more
 
